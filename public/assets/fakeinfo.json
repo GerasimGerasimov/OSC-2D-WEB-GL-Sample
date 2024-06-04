@@ -1,0 +1,1945 @@
+{
+  "ClientID": "8AZ0kQ",
+  "MessageID": "1717501025358",
+  "cmd": "getInfo",
+  "payload": {
+    "status": "OK",
+    "time": "2024-06-04T11:37:05.363Z",
+    "data": {
+      "U1": {
+        "PositionName": "U1",
+        "Description": "DExS.VTEG/Регулятор возбуждения/",
+        "Pages": [
+          "p0=Самовозбуждение/FLASH:SelfExciteEnable,FLASH:Ready_GS_ON/",
+          "p1=Задания автоматического режима/RAM:Usgz,RAM:Stz,RAM:UstStC,RAM:Ustat,FLASH:zUs,FLASH:zSt/",
+          "p2=Выходные параметры/RAM:Iexc,RAM:Ustat,RAM:Istat,RAM:Fi,RAM:Ssg,RAM:Psg,RAM:Qsg,RAM:Freq,RAM:Usg_ab/",
+          "p3=Готовность/RAM:iReady,RAM:iPCSB_QF1,RAM:iCCSB_QF5,RAM:DExS_PWR_OK,RAM:iSwState,RAM:FAULT,RAM:TestMode/",
+          "p4=Аварии/RAM:GlobalError,RAM:FieldFail,RAM:UstMaxFlt,RAM:NotUpVoltage,RAM:IttMaxFlt,RAM:IexcMaxFlt,RAM:FltMPS,RAM:FltCCSB,RAM:FSAsyncRun,RAM:QminAsyncRun,RAM:FLongForce,RAM:FreqMinFlt,RAM:R_INSL_FLT,RAM:IstOV/",
+          "p5=Предупреждения/RAM:R_INSL_LOW,RAM:UstLow,RAM:UstFail,RAM:i2tR,RAM:UstMaxFlt/",
+          "p6=Дискретные входы/RAM:iReady,RAM:iTest,RAM:iReset,RAM:iSwState,RAM:iIRp+,RAM:iAuto,RAM:iEnergize,RAM:iBlanking,RAM:iSGFault,RAM:iPCSB_QF1,RAM:iCCSB_QF5,RAM:iLocalMode/",
+          "p7=Дискретные выходы/RAM:oREADY_K2,RAM:oExcite_K5,RAM:oComplete_K6,RAM:oWARNING_K3,RAM:oFAULT_K4,RAM:oINSLFlt_K7,RAM:oCROWBAR_K1,RAM:oReserve_K8/",
+          "p8=Преобразователь/RAM:Iexc,RAM:Uexc,RAM:A,RAM:Uab_sync,RAM:Ubc_sync,RAM:Uca_sync,RAM:IttA,RAM:IttB,RAM:IttC/",
+          "p9=Реактивная мощность/RAM:Qsg,RAM:Qoe,RAM:QLimMin,RAM:QLimMax/",
+          "p10=Ограничители.Ток возбуждения/RAM:Iexc,RAM:IexcLimMax,RAM:IexcLimMin,FLASH:fIexcMin,FLASH:fIexcMax,FLASH:fIexcForce,FLASH:Iref_i2t_R_limit,FLASH:i2tOV_OFF_R,FLASH:i2tOV_ON_R,FLASH:Ti2tR/",
+          "p11=Ограничители.Напряжение/RAM:Ustat,RAM:Usgz,RAM:UstStC,FLASH:UstLmax,FLASH:UstLmin/",
+          "p12=Ограничители.Реактивная мощность/RAM:Qsg,RAM:Qoe,RAM:QLimMin,RAM:QLimMax,FLASH:Pnom,FLASH:QminP0,FLASH:QminP1,FLASH:QmaxP0,FLASH:QmaxP1,FLASH:dQmin,FLASH:QminAsyncTime/",
+          "p13=Начальное возбуждение/FLASH:IexcTest,FLASH:fIexcStart,FLASH:dIz,FLASH:zUs,FLASH:UstNom,FLASH:UstStart,FLASH:FltUpVoltageTime/",
+          "p14=Контроль напряжения статора/RAM:Ustat,RAM:UstLow,RAM:UstFail,FLASH:UstNom,FLASH:UstLowReset,FLASH:UstLowSet,FLASH:UstFailReset,FLASH:UstFailSet/",
+          "p15=Коэффициенты регулятора/FLASH:KUst,FLASH:KIexc,FLASH:Ti,CD:TfUstat,CD:TfIload,CD:TfFi/",
+          "p16=Изоляция/RAM:RINSL,RAM:R_INSL_LOW,RAM:R_INSL_FLT,FLASH:RInslLow,FLASH:RInslFlt,FLASH:RInslUp,FLASH:RInslFltEnable/"
+        ],
+        "Slots": [
+          "U1:RAM",
+          "U1:CD",
+          "U1:FLASH"
+        ],
+        "Tags": {
+          "ram": {
+            "p00020": {
+              "name": "DExS_PWR_LNK",
+              "comment": "Наличие связи с платой DExS.PWR",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00021": {
+              "name": "DExS_PWR_OK",
+              "comment": "Качество сети выпрямителя и исправность DExS.PWR",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00022": {
+              "name": "SyncRect",
+              "comment": "Наличие синхроимпульсов выпрямителя",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00023": {
+              "name": "ExtRegTimeOut",
+              "comment": "Приостановка автоматического регулятор",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00024": {
+              "name": "R_INSL_LOW",
+              "comment": "Предупредительный порог изоляции",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00025": {
+              "name": "PWR",
+              "comment": "Выпрямитель включен",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00026": {
+              "name": "Blank",
+              "comment": "Инвертирование",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00027": {
+              "name": "CLM",
+              "comment": "режим ограничения тока",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00030": {
+              "name": "RecImpBlk",
+              "comment": "Блокировка импульсов",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00031": {
+              "name": "izr_min",
+              "comment": "Ограничение минимального задания в ручном режиме",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00032": {
+              "name": "izr_max",
+              "comment": "Ограничение максимального задания в ручном режиме",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00033": {
+              "name": "FreqRelay",
+              "comment": "Наличие наведённого напряжения",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00034": {
+              "name": "FS+",
+              "comment": "Скольжение. Положительный полупериод",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00035": {
+              "name": "FS-",
+              "comment": "Скольжение. Отрицательный полупериод",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00036": {
+              "name": "UstLow",
+              "comment": "Просадка напряжения сети",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00037": {
+              "name": "UstFail",
+              "comment": "Отсутствие напряжения сети",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00120": {
+              "name": "ForceByUst",
+              "comment": "Форсировка при просадке напряжения статора",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00121": {
+              "name": "cfi_enable",
+              "comment": "Есть сигналы от датчика фазы тока статора",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00122": {
+              "name": "cfu_enable",
+              "comment": "Есть сигналы от датчика фазы напряжения статора",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00123": {
+              "name": "i2tR",
+              "comment": "Перегрев ротора",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00124": {
+              "name": "TestMode",
+              "comment": "Режим опробования",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00125": {
+              "name": "Down",
+              "comment": "",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00126": {
+              "name": "Up",
+              "comment": "",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00127": {
+              "name": "ThGFBReady",
+              "comment": "Тиристорный ключ цепи гашения поля исправен",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00133": {
+              "name": "QminLimIrUp",
+              "comment": "Достигнута минимальная реактивная мощность, требуется повысить ток возбуждения",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00134": {
+              "name": "QmaxLimIrDn",
+              "comment": "Достигнута максимальная реактивная мощность, требуется снизить ток возбуждения",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00135": {
+              "name": "MCDT",
+              "comment": "Триггер основного цикла ПО ",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00136": {
+              "name": "FS_OK",
+              "comment": "Готовность файловой системы регистратора",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00137": {
+              "name": "FLASHWRITE",
+              "comment": "Индикатор изменения уставок",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00220": {
+              "name": "Auto",
+              "comment": "индикатор режима работы 1-Авто 0-ручной",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00320": {
+              "name": "FAULT",
+              "comment": "Авария (общий сигнал)",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00322": {
+              "name": "GlobalError",
+              "comment": "",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00323": {
+              "name": "FieldFail",
+              "comment": "Отсутствие возбуждения",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00324": {
+              "name": "UstMaxFlt",
+              "comment": "Превышение максимального напряжения статора",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00325": {
+              "name": "IttMaxFlt",
+              "comment": "Aвария превышение тока выпрямителя (по ТТ)",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00326": {
+              "name": "IexcMaxFlt",
+              "comment": "Aвария превышение тока нагрузки",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00327": {
+              "name": "FltMPS",
+              "comment": "Авария отключение силового выключателя во время работы",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00330": {
+              "name": "FSAsyncRun",
+              "comment": "Асинхронный ход по датчику наведённого напряжения",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00331": {
+              "name": "FLongForce",
+              "comment": "Превышение времени форсировки",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00332": {
+              "name": "FltCCSB",
+              "comment": "авария по причине пропадания напряжения питания оперативных цепей от ГЩУ",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00333": {
+              "name": "FreqMinFlt",
+              "comment": "Минимальная частота напряжения генератора",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00334": {
+              "name": "QminAsyncRun",
+              "comment": "Асинхронный ход по минимальной реактивной мощности",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00335": {
+              "name": "NotUpVoltage",
+              "comment": "Не достигнута уставка напряжения при пуске генератора",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00336": {
+              "name": "R_INSL_FLT",
+              "comment": "Аварийный порог изоляции",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00337": {
+              "name": "IstOV",
+              "comment": "Перегруз статора",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00423": {
+              "name": "iLocalMode",
+              "comment": "Ключ \"Местный|Дистанционный\"",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00424": {
+              "name": "iCCSB_QF5",
+              "comment": "вход сост. выключателя внешних питания цепей управления",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00425": {
+              "name": "iPCSB_QF1",
+              "comment": "вход сост. силового выключателя",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00426": {
+              "name": "iSGFault",
+              "comment": "вход \"защита генератора\"",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00427": {
+              "name": "iBlanking",
+              "comment": "вход \"ГАШЕНИЕ\"",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00430": {
+              "name": "iEnergize",
+              "comment": "вход \"ВОЗБУЖДЕНИЕ\"",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00431": {
+              "name": "iAuto",
+              "comment": "переключатель \"Ручной|Автоматический\"",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00432": {
+              "name": "iIRm-",
+              "comment": "Задание -",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00433": {
+              "name": "iIRp+",
+              "comment": "Задание +",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00434": {
+              "name": "iSwState",
+              "comment": "Контакт cостояния сетевого выключателя генератора",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00435": {
+              "name": "iReset",
+              "comment": "\"Сброс защит\" кнопка",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00436": {
+              "name": "iTest",
+              "comment": "\"Опробование\" кнопка",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00437": {
+              "name": "iReady",
+              "comment": "Kлюч готовности к пуску работа \"Запрещена|разрешена\"",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00529": {
+              "name": "oStartExcite",
+              "comment": "Реле начального возбуждения",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00530": {
+              "name": "oReserve_K8",
+              "comment": "Резервное реле",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00531": {
+              "name": "oINSLFlt_K7",
+              "comment": "Нарушение изоляции обмотки ротора",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00532": {
+              "name": "oComplete_K6",
+              "comment": "Выход на заданную уставку",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00533": {
+              "name": "oExcite_K5",
+              "comment": "Возбуждение (включено)",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00534": {
+              "name": "oFAULT_K4",
+              "comment": "Авария",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00535": {
+              "name": "oWARNING_K3",
+              "comment": "Предупреждение",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00536": {
+              "name": "oREADY_K2",
+              "comment": "Готовность",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00537": {
+              "name": "oCROWBAR_K1",
+              "comment": "Шунтировка тиристорного ключа",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p00600": {
+              "name": "Ustat",
+              "comment": "Напряжение статора",
+              "objType": "TWORD",
+              "msu": "V"
+            },
+            "p00700": {
+              "name": "Istat",
+              "comment": "Ток статора",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p00800": {
+              "name": "Istat_max",
+              "comment": "Ток статора \"грубо\"",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p00900": {
+              "name": "Uexc",
+              "comment": "Напряжение возбуждения",
+              "objType": "TInteger",
+              "msu": "V"
+            },
+            "p01000": {
+              "name": "Iexc",
+              "comment": "Ток возбуждения",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p01100": {
+              "name": "IttA",
+              "comment": "Ток выпрямителя ТТА",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p01200": {
+              "name": "IttB",
+              "comment": "Ток выпрямителя ТТВ",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p01300": {
+              "name": "IttC",
+              "comment": "Ток выпрямителя ТТС",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p01400": {
+              "name": "Upwr_ab",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "V"
+            },
+            "p01500": {
+              "name": "Upwr_bc",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "V"
+            },
+            "p01600": {
+              "name": "Upwr_ca",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "V"
+            },
+            "p01700": {
+              "name": "Ipwr",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p01800": {
+              "name": "Usg_ab",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "V"
+            },
+            "p01900": {
+              "name": "Usg_bc",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "V"
+            },
+            "p02000": {
+              "name": "Usg_ca",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "V"
+            },
+            "p02100": {
+              "name": "Freq",
+              "comment": "Частота напряжения генератора",
+              "objType": "TWORD",
+              "msu": "Hz"
+            },
+            "p02200": {
+              "name": "Fi",
+              "comment": "угол Фи (cos)",
+              "objType": "TFloat",
+              "msu": "grad"
+            },
+            "p02400": {
+              "name": "DEX_STATE",
+              "comment": "Состояние возбудителя",
+              "objType": "TWORD",
+              "msu": "--"
+            },
+            "p02500": {
+              "name": "UstStC",
+              "comment": "Вычисленное значение Uz+St*C (контроль)",
+              "objType": "TWORD",
+              "msu": "B"
+            },
+            "p02800": {
+              "name": "_Qref",
+              "comment": "Задание реактивной мощности",
+              "objType": "TFloat",
+              "msu": "kVAr"
+            },
+            "p03000": {
+              "name": "EReg",
+              "comment": "Накопитель регулятора",
+              "objType": "TFloat",
+              "msu": "A"
+            },
+            "p03200": {
+              "name": "Usgz",
+              "comment": "Заданное напряжение статора",
+              "objType": "TFloat",
+              "msu": "B"
+            },
+            "p03400": {
+              "name": "Stz",
+              "comment": "Заданный статизм",
+              "objType": "TFloat",
+              "msu": "o.e."
+            },
+            "p03600": {
+              "name": "dVQref",
+              "comment": "Приращение к реактивной мощности в зависимоcти от активной",
+              "objType": "TFloat",
+              "msu": "V"
+            },
+            "p03800": {
+              "name": "IexcLimMax",
+              "comment": "Ограничение тока возбуждения по максимуму",
+              "objType": "TFloat",
+              "msu": "А"
+            },
+            "p04000": {
+              "name": "IexcLimMin",
+              "comment": "Ограничение тока возбуждения по минимуму",
+              "objType": "TFloat",
+              "msu": "А"
+            },
+            "p04200": {
+              "name": "RegCMD",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "-"
+            },
+            "p43600": {
+              "name": "IexcHistory",
+              "comment": "Iexc одну секунду назад",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p04400": {
+              "name": "A",
+              "comment": "Угол управления тиристорами",
+              "objType": "TFloat",
+              "msu": "grad"
+            },
+            "p04600": {
+              "name": "r200E",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "-"
+            },
+            "p04700": {
+              "name": "RINSL",
+              "comment": "Сопротивление изоляции",
+              "objType": "TWORD",
+              "msu": "kOm"
+            },
+            "p04800": {
+              "name": "FreqRect",
+              "comment": "Частота напряжения питающей сети выпрямителя",
+              "objType": "TWORD",
+              "msu": "Hz"
+            },
+            "p04900": {
+              "name": "Uab_sync",
+              "comment": "Линейное напряжение синхронизации выпрямителя AB",
+              "objType": "TWORD",
+              "msu": "V"
+            },
+            "p05000": {
+              "name": "Ubc_sync",
+              "comment": "Линейное напряжение синхронизации выпрямителя BC",
+              "objType": "TWORD",
+              "msu": "V"
+            },
+            "p05100": {
+              "name": "Uca_sync",
+              "comment": "Линейное напряжение синхронизации выпрямителя CA",
+              "objType": "TWORD",
+              "msu": "V"
+            },
+            "p05200": {
+              "name": "Ssg",
+              "comment": "Полная мощность генератора",
+              "objType": "TFloat",
+              "msu": "kW"
+            },
+            "p05400": {
+              "name": "Psg",
+              "comment": "Активная мощность генератора",
+              "objType": "TFloat",
+              "msu": "kBA"
+            },
+            "p05600": {
+              "name": "Qsg",
+              "comment": "Реактивная мощность генератора",
+              "objType": "TFloat",
+              "msu": "kBAr"
+            },
+            "p05900": {
+              "name": "QLimMin",
+              "comment": "Допустимая минимальная реактивная мощность",
+              "objType": "TInteger",
+              "msu": "--"
+            },
+            "p06000": {
+              "name": "QLimMax",
+              "comment": "Допустимая мaксимальная реактивная мощность",
+              "objType": "TInteger",
+              "msu": "--"
+            },
+            "p06200": {
+              "name": "Qoe",
+              "comment": "Реактивная мощность в относительных единицах",
+              "objType": "TFloat",
+              "msu": "o.e."
+            },
+            "p06401": {
+              "name": "F0.SELECT",
+              "comment": "Выбранный системой регулятор. 0-Основной 1-Резервный",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06402": {
+              "name": "F0.SEL_SW",
+              "comment": "Положение переключателя \"Основной|Резервный\" 0- пользователем выбран Основной, 1 - выбран Резервный",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06403": {
+              "name": "F0.DEV1_OK",
+              "comment": "1-Основной регулятор исправен и готов к работе",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06404": {
+              "name": "F0.DEV1_RON",
+              "comment": "1-Активен основной регулятор",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06405": {
+              "name": "F0.DEV2_OK",
+              "comment": "1-Резервный регулятор исправен и готов к работе",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06406": {
+              "name": "F0.DEV2_RON",
+              "comment": "1-Активен резервный регулятор",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06407": {
+              "name": "F0.DEV1_LNK",
+              "comment": "Наличие связи с регулятором. 1-основной регулятор на связи",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06408": {
+              "name": "F0.DEV2_LNK",
+              "comment": "Наличие связи с регулятором. 1-резервный регулятор на связи",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06409": {
+              "name": "F0.DEV1_Ios",
+              "comment": "Контроль датчика тока возбуждения. Основной. 1-ток возбуждения в пределах заданного ",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06410": {
+              "name": "F0.DEV2_Ios",
+              "comment": "Контроль датчика тока возбуждения. Резервный. 1-ток возбуждения в пределах заданного",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06411": {
+              "name": "F0.DEV1_SYN",
+              "comment": "Наличие синхронизации с сетью. Основной. 1-исправен",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06412": {
+              "name": "F0.DEV2_SYN",
+              "comment": "Наличие синхронизации с сетью. Резервный. 1-исправен",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06413": {
+              "name": "F0.DEV1_PWR",
+              "comment": "Наличие питания =24В. Основной. 1-исправен",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06414": {
+              "name": "F0.DEV2_PWR",
+              "comment": "Наличие питания =24В. Резервный. 1-исправен",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06415": {
+              "name": "F0.DEV_EQU",
+              "comment": "1-Регуляторы эквивалентны (выполняют одинаковые действия)",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06416": {
+              "name": "F0.ALRFRST",
+              "comment": "Кто первым обнаружил аварию? 0-основной 1-резервный ",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06501": {
+              "name": "DIN.0(C1_AC)",
+              "comment": "С1 вводной выключатель",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06502": {
+              "name": "DIN.1(C1_DC)",
+              "comment": "С1 отходящий выключатель",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06503": {
+              "name": "DIN.2(C2_AC)",
+              "comment": "С2 вводной выключатель",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06504": {
+              "name": "DIN.3(C2_DC)",
+              "comment": "С2 отходящий выключатель",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06505": {
+              "name": "DIN.4(OWH)",
+              "comment": "\"ПЕРЕГРЕВ\". 0-Перегрев",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06506": {
+              "name": "DIN.5(SEL)",
+              "comment": "Переключатель выбор регулятора",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06507": {
+              "name": "DIN.6(C1_SPWR)",
+              "comment": "C1 24В пит. собственных нужд",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06508": {
+              "name": "DIN.7(C2_SPWR)",
+              "comment": "C2 24В пит. собственных нужд",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06601": {
+              "name": "DOUT.0(RON1)",
+              "comment": "",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06602": {
+              "name": "DOUT.1(RON2)",
+              "comment": "",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06603": {
+              "name": "DOUT.2(NVR)",
+              "comment": "Реле аварии \"Нет исправных регуляторов\"",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06604": {
+              "name": "DOUT.3",
+              "comment": "",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06605": {
+              "name": "DOUT.4(EXCITE)",
+              "comment": "Реле \"ВОЗБУЖДЕНИЕ\"",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06606": {
+              "name": "DOUT.5(RQREADY)",
+              "comment": "Выключатели выпрямителей включены",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06700": {
+              "name": "DEV_STATE",
+              "comment": "---",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p06800": {
+              "name": "FSERVICE",
+              "comment": "Управление FLASH сервисами",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p06901": {
+              "name": "F1.DEV1_THF",
+              "comment": "Основной регулятор. 1-ок. 0-канал управления тиристорами НЕисправен ",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06902": {
+              "name": "F1.DEV2_THF",
+              "comment": "Резервный регулятор. 1-ок. 0-канал управления тиристорами НЕисправен",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06903": {
+              "name": "F1.GLB_ERR",
+              "comment": "1-Авария вычисленная iCM (сигнал аварийного завершения работы для всех регуляторов)",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06904": {
+              "name": "F1.DEV1_NFF",
+              "comment": "Контроль наличия возбуждения. Основной. 1-возбуждение в норме. 0-обрыв поля",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06905": {
+              "name": "F1.DEV2_NFF",
+              "comment": "Контроль наличия возбуждения. Резервный. 1-возбуждение в норме. 0-обрыв поля",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06906": {
+              "name": "F1.DEV1_RQON",
+              "comment": "Q6 выпрямителя. Основной. 1-включен. 0-отключен",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06907": {
+              "name": "F1.DEV2_RQON",
+              "comment": "Q7 выпрямителя. Резервный. 1-включен. 0-отключен",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06908": {
+              "name": "F1.NotValidReg",
+              "comment": "Авария. Нет исправных регуляторов",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06909": {
+              "name": "F1.OVH",
+              "comment": "Авария. ПЕРЕГРЕВ",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06910": {
+              "name": "F1.DEV1_ARV",
+              "comment": "Авто-режим. Основной. 1-включен. 0-отключен",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06911": {
+              "name": "F1.DEV2_ARV",
+              "comment": "Авто-режим. Резервный. 1-включен. 0-отключен",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06917": {
+              "name": "F1.CAIN1OK",
+              "comment": "CAIN1 Контроль целостности линии 4-20мА",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p06918": {
+              "name": "F1.CAIN2OK",
+              "comment": "CAIN2 Контроль целостности линии 4-20мА",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p07000": {
+              "name": "iAIN1",
+              "comment": "---",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p07100": {
+              "name": "iAIN2",
+              "comment": "---",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p07200": {
+              "name": "PWM1",
+              "comment": "---",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p07300": {
+              "name": "PWM2",
+              "comment": "---",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p07400": {
+              "name": "PWM3",
+              "comment": "---",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p07500": {
+              "name": "w1",
+              "comment": "---",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p07800": {
+              "name": "TPWR",
+              "comment": "Температура силовой части",
+              "objType": "TWORD",
+              "msu": "°C"
+            }
+          },
+          "flash": {
+            "p00000": {
+              "name": "fIexcStart",
+              "comment": "Задание тока возбуждения в ручном режиме",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p00100": {
+              "name": "IexcTest",
+              "comment": "Уставка тока проверки цепи гашения (в режиме опробования)",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p00200": {
+              "name": "UmaxSpRect",
+              "comment": "максимальное напряжение питания выпрямителя",
+              "objType": "TWORD",
+              "msu": "В"
+            },
+            "p00300": {
+              "name": "UminSpRect",
+              "comment": "минимальное напряжение питания выпрямителя",
+              "objType": "TWORD",
+              "msu": "B"
+            },
+            "p00400": {
+              "name": "FmaxSpRect",
+              "comment": "максимальная частота питания выпрямителя",
+              "objType": "TWORD",
+              "msu": "Гц"
+            },
+            "p00500": {
+              "name": "FminSpRect",
+              "comment": "минимальная частота питания выпрямителя",
+              "objType": "TWORD",
+              "msu": "Гц"
+            },
+            "p00600": {
+              "name": "SUPPLFltTime",
+              "comment": "время определения качества сети",
+              "objType": "TWORD",
+              "msu": "sec"
+            },
+            "p00700": {
+              "name": "RInslLow",
+              "comment": "аварийный порог сопротивления изоляции",
+              "objType": "TWORD",
+              "msu": "kOm"
+            },
+            "p00800": {
+              "name": "RInslFlt",
+              "comment": "предупредительный порог сопротивления изоляции",
+              "objType": "TWORD",
+              "msu": "kOm"
+            },
+            "p00900": {
+              "name": "RInslUp",
+              "comment": "восстановление изоляции",
+              "objType": "TWORD",
+              "msu": "kOm"
+            },
+            "p01020": {
+              "name": "Ready_GS_ON",
+              "comment": "Готовность при включенном СВ 1-разрешена 0-запрещена",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p01021": {
+              "name": "RInslFltEnable",
+              "comment": "Отключение по пробою изоляции 1-разрешено 0-запрещено",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p01022": {
+              "name": "FltCCSB_QF5",
+              "comment": "Отключение при пропадании питания цепей ГЩУ 1-разрешено 0-запрещено",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p01023": {
+              "name": "FltMPS_QF1",
+              "comment": "Отключение при отключении силового выключателя 1-разрешено 0-запрещено",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p01024": {
+              "name": "FFE",
+              "comment": "Отключение при обрыве поля 1-разрешено 0-запрещено",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p01025": {
+              "name": "SelfExciteEnable",
+              "comment": "Самовозбуждение 1-разрешено 0-запрещено",
+              "objType": "TBit",
+              "msu": ""
+            },
+            "p01100": {
+              "name": "IrMaxFlt",
+              "comment": "Максимально-токовой защиты нагрузки по шунту",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p01200": {
+              "name": "IttMaxFlt",
+              "comment": "Mаксимально-токовой защиты выпрямителя (ТТ на входе выпрямителя)",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p01300": {
+              "name": "FieldFailTime",
+              "comment": "Время срабатывания защиты \"Обрыв Поля\"",
+              "objType": "TWORD",
+              "msu": "sec"
+            },
+            "p01400": {
+              "name": "fIrFieldFail",
+              "comment": "Уставка тока обрыва поля",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p01500": {
+              "name": "KUst",
+              "comment": "Коэф.усиления регулятора напряжения",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p01600": {
+              "name": "KIexc",
+              "comment": "Коэф. усиления регулятора тока",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p01700": {
+              "name": "Ti",
+              "comment": "Пост.времени регулятора",
+              "objType": "TWORD",
+              "msu": "sec"
+            },
+            "p01800": {
+              "name": "Amax",
+              "comment": "Максимальный угол управления",
+              "objType": "TWORD",
+              "msu": "grad"
+            },
+            "p01900": {
+              "name": "Amin",
+              "comment": "Минимальный угол управления",
+              "objType": "TWORD",
+              "msu": "grad"
+            },
+            "p02000": {
+              "name": "Ablank",
+              "comment": "Макс. угол при гашении поля",
+              "objType": "TWORD",
+              "msu": "grad"
+            },
+            "p02100": {
+              "name": "TestTime",
+              "comment": "Время тестирования цепи гашения",
+              "objType": "TWORD",
+              "msu": "sec"
+            },
+            "p02200": {
+              "name": "BlankTime",
+              "comment": "Время инвертирования",
+              "objType": "TWORD",
+              "msu": "sec"
+            },
+            "p02300": {
+              "name": "FSAsyncTime",
+              "comment": "Время асинхронного хода по цепи скольжения",
+              "objType": "TWORD",
+              "msu": "sec"
+            },
+            "p02800": {
+              "name": "UstMax",
+              "comment": "Максимальное напряжение статора",
+              "objType": "TWORD",
+              "msu": "B"
+            },
+            "p02900": {
+              "name": "UstMaxTime",
+              "comment": "Задержка перед отключением",
+              "objType": "TWORD",
+              "msu": "sec"
+            },
+            "p03000": {
+              "name": "FreqMinFlt",
+              "comment": "Уставка минимальной частоты",
+              "objType": "TWORD",
+              "msu": "Hz"
+            },
+            "p03100": {
+              "name": "FreqMinFltTime",
+              "comment": "Время отключения при минимальной частоте",
+              "objType": "TWORD",
+              "msu": "sec"
+            },
+            "p03200": {
+              "name": "Ti2tR",
+              "comment": "Пост. времени нагрева ротора",
+              "objType": "TWORD",
+              "msu": "---"
+            },
+            "p03300": {
+              "name": "i2tOV_ON_R",
+              "comment": "Уставка включения \"Перегрев Ротора\"",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p03400": {
+              "name": "i2tOV_OFF_R",
+              "comment": "Уставка отключения \"Перегрев Ротора\"",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p03500": {
+              "name": "Iref_i2t_R_limit",
+              "comment": "Максимальный заданный ток возбуждения при перегрев Ротора",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p03600": {
+              "name": "fIexcForce",
+              "comment": "Ток форсировки",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p03700": {
+              "name": "fIexcMin",
+              "comment": "Минимальный ток ротора",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p03800": {
+              "name": "fIexcMax",
+              "comment": "Максимальный ток ротора",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p03900": {
+              "name": "zUs",
+              "comment": "Заданное напряжение статора",
+              "objType": "TWORD",
+              "msu": "B"
+            },
+            "p04200": {
+              "name": "zSt",
+              "comment": "Коэффициент статизма",
+              "objType": "TInteger",
+              "msu": "o.e."
+            },
+            "p04300": {
+              "name": "IrefBtnSpeed",
+              "comment": "Величина приращения тока в ручную",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p04400": {
+              "name": "Pnom",
+              "comment": "Номинальная мощность",
+              "objType": "TWORD",
+              "msu": "MVA"
+            },
+            "p04500": {
+              "name": "QminP0",
+              "comment": "Минимальная реакт. мощность при Р=0",
+              "objType": "TInteger",
+              "msu": "o.e."
+            },
+            "p04600": {
+              "name": "QminP1",
+              "comment": "Минимальная реакт. мощность при Р=1",
+              "objType": "TInteger",
+              "msu": "o.e."
+            },
+            "p04700": {
+              "name": "dQmin",
+              "comment": "Зона нечуствительности",
+              "objType": "TInteger",
+              "msu": "o.e."
+            },
+            "p04800": {
+              "name": "QmaxP0",
+              "comment": "Максимальная реактивная мощность при Р=0",
+              "objType": "TInteger",
+              "msu": "o.e."
+            },
+            "p04900": {
+              "name": "QmaxP1",
+              "comment": "Максимальная реактивная мощность при Р=1",
+              "objType": "TInteger",
+              "msu": "o.e."
+            },
+            "p05000": {
+              "name": "QminAsyncTime",
+              "comment": "Время асинхронного хода по реактивной мощности",
+              "objType": "TWORD",
+              "msu": "sec"
+            },
+            "p05200": {
+              "name": "WaitStable",
+              "comment": "Время перехода на авторегулятор при изменениях в работе регулятора",
+              "objType": "TWORD",
+              "msu": "sec"
+            },
+            "p05300": {
+              "name": "StLmax",
+              "comment": "Макс. заданный статизм",
+              "objType": "TInteger",
+              "msu": "o.e."
+            },
+            "p05400": {
+              "name": "StLmin",
+              "comment": "Мин. заданный статизм",
+              "objType": "TInteger",
+              "msu": "o.e."
+            },
+            "p05500": {
+              "name": "UstLmax",
+              "comment": "Макс. заданное напряжение статора",
+              "objType": "TWORD",
+              "msu": "B"
+            },
+            "p05600": {
+              "name": "UstLmin",
+              "comment": "Мин. заданное напряжение статора",
+              "objType": "TWORD",
+              "msu": "B"
+            },
+            "p05700": {
+              "name": "FLmax",
+              "comment": "Макс. заданный угол Фи",
+              "objType": "TInteger",
+              "msu": "grad"
+            },
+            "p05800": {
+              "name": "FLmin",
+              "comment": "Мин. заданный угол Фи",
+              "objType": "TInteger",
+              "msu": "grad"
+            },
+            "p05900": {
+              "name": "QPFraction",
+              "comment": "Доля рекативной мощности Q в % от активной мощности P",
+              "objType": "TWORD",
+              "msu": "%"
+            },
+            "p06100": {
+              "name": "IzForceDwn",
+              "comment": "Темп сброса тока после форсировки",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p06200": {
+              "name": "UstNom",
+              "comment": "Номинальное напряжение статора",
+              "objType": "TWORD",
+              "msu": "B"
+            },
+            "p06300": {
+              "name": "UstStart",
+              "comment": "Начальное напряжение",
+              "objType": "TWORD",
+              "msu": "B"
+            },
+            "p06400": {
+              "name": "FltUpVoltageTime",
+              "comment": "Время ожидания достижения уставки напряжения при начальном возбуждении генератора",
+              "objType": "TWORD",
+              "msu": "sec"
+            },
+            "p02400": {
+              "name": "UstLowReset",
+              "comment": "Восстановлении напряжения статора (сброса форсировки при)",
+              "objType": "TWORD",
+              "msu": "B"
+            },
+            "p02500": {
+              "name": "UstLowSet",
+              "comment": "Просадка напряжения статора (подачи форсировки)",
+              "objType": "TWORD",
+              "msu": "B"
+            },
+            "p02600": {
+              "name": "UstFailReset",
+              "comment": "Минимальный уровень напряжения статора",
+              "objType": "TWORD",
+              "msu": "B"
+            },
+            "p02700": {
+              "name": "UstFailSet",
+              "comment": "Отсутствие напряжения статора",
+              "objType": "TWORD",
+              "msu": "B"
+            },
+            "p06500": {
+              "name": "dIz",
+              "comment": "Величина приращения тока",
+              "objType": "TWORD",
+              "msu": "A"
+            },
+            "p06600": {
+              "name": "dUz",
+              "comment": "Величина приращения напряжения",
+              "objType": "TWORD",
+              "msu": "B"
+            },
+            "p06700": {
+              "name": "dQref",
+              "comment": "Задатчик интенсивности для регулирования реактивной мощности",
+              "objType": "TWORD",
+              "msu": "VPS"
+            },
+            "p06800": {
+              "name": "IexcNom",
+              "comment": "Номинальный ток возбуждения",
+              "objType": "TWORD",
+              "msu": "A"
+            }
+          },
+          "cd": {
+            "p60200": {
+              "name": "tdir_Modbus_RS485",
+              "comment": "пауза перед ответом",
+              "objType": "TWORD",
+              "msu": "us"
+            },
+            "p60300": {
+              "name": "tdir_Modbus_option",
+              "comment": "пауза перед ответом",
+              "objType": "TWORD",
+              "msu": "us"
+            },
+            "p60400": {
+              "name": "tdir_Modbus_USB",
+              "comment": "пауза перед ответом",
+              "objType": "TWORD",
+              "msu": "us"
+            },
+            "p60510": {
+              "name": "Modbus_Local1_DVA",
+              "comment": "адрес",
+              "objType": "TByte",
+              "msu": "*"
+            },
+            "p60700": {
+              "name": "lnk_mngr_t_TO",
+              "comment": "время таймаута для линк-менеджера",
+              "objType": "TWORD",
+              "msu": "ms"
+            },
+            "p60800": {
+              "name": "lnk_mngr_t_ChSl",
+              "comment": "время между запросами линк-менеджера",
+              "objType": "TWORD",
+              "msu": "ms"
+            },
+            "p60900": {
+              "name": "lnk_mngr_t_DIR",
+              "comment": "время переключения Tx->Rx линк-менеджера",
+              "objType": "TWORD",
+              "msu": "ms"
+            },
+            "p61000": {
+              "name": "Oadc_Ustat",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p61100": {
+              "name": "Oadc_Istat",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p61200": {
+              "name": "Oadc_Istat_max",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p61300": {
+              "name": "Oadc_Uload",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p61400": {
+              "name": "Oadc_Iload",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p61500": {
+              "name": "Oadc_In1",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p61600": {
+              "name": "Oadc_In2",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p61700": {
+              "name": "Oadc_In3",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p61800": {
+              "name": "Oadc_Upwr_AB",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p61900": {
+              "name": "Oadc_Upwr_BC",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p62000": {
+              "name": "Oadc_Upwr_CA",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p62100": {
+              "name": "Oadc_Ipwr",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p62200": {
+              "name": "Oadc_Usg_AB",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p62300": {
+              "name": "Oadc_Usg_BC",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p62400": {
+              "name": "Oadc_Usg_CA",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p62600": {
+              "name": "Kadc_Ustat",
+              "comment": "",
+              "objType": "TFloat",
+              "msu": "*"
+            },
+            "p62800": {
+              "name": "Kadc_Istat",
+              "comment": "",
+              "objType": "TFloat",
+              "msu": "*"
+            },
+            "p63000": {
+              "name": "Kadc_Istat_max",
+              "comment": "",
+              "objType": "TFloat",
+              "msu": "*"
+            },
+            "p63200": {
+              "name": "Kadc_Uload",
+              "comment": "",
+              "objType": "TFloat",
+              "msu": "*"
+            },
+            "p63400": {
+              "name": "Kadc_Iload",
+              "comment": "",
+              "objType": "TFloat",
+              "msu": "*"
+            },
+            "p63600": {
+              "name": "Kadc_In1",
+              "comment": "",
+              "objType": "TFloat",
+              "msu": "*"
+            },
+            "p63800": {
+              "name": "Kadc_In2",
+              "comment": "",
+              "objType": "TFloat",
+              "msu": "*"
+            },
+            "p64000": {
+              "name": "Kadc_In3",
+              "comment": "",
+              "objType": "TFloat",
+              "msu": "*"
+            },
+            "p64200": {
+              "name": "Kadc_Upwr_AB",
+              "comment": "",
+              "objType": "TFloat",
+              "msu": "*"
+            },
+            "p64400": {
+              "name": "Kadc_Upwr_BC",
+              "comment": "",
+              "objType": "TFloat",
+              "msu": "*"
+            },
+            "p64600": {
+              "name": "Kadc_Upwr_CB",
+              "comment": "",
+              "objType": "TFloat",
+              "msu": "*"
+            },
+            "p64800": {
+              "name": "Kadc_Ipwr",
+              "comment": "",
+              "objType": "TFloat",
+              "msu": "*"
+            },
+            "p65000": {
+              "name": "Kadc_Usg_AB",
+              "comment": "",
+              "objType": "TFloat",
+              "msu": "*"
+            },
+            "p65200": {
+              "name": "Kadc_Usg_BC",
+              "comment": "",
+              "objType": "TFloat",
+              "msu": "*"
+            },
+            "p65400": {
+              "name": "Kadc_Usg_CB",
+              "comment": "",
+              "objType": "TFloat",
+              "msu": "*"
+            },
+            "p65600": {
+              "name": "S_DExS_PWR_R",
+              "comment": "шкала для сопротивления изоляции",
+              "objType": "TFloat",
+              "msu": "*"
+            },
+            "p65800": {
+              "name": "S_DExS_PWR_F",
+              "comment": "шкала для частоты",
+              "objType": "TFloat",
+              "msu": "*"
+            },
+            "p66000": {
+              "name": "S_DExS_PWR_U",
+              "comment": "шкала для напряжения",
+              "objType": "TFloat",
+              "msu": "*"
+            },
+            "p66200": {
+              "name": "TfUstat",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p66300": {
+              "name": "TfIstat",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p66400": {
+              "name": "TfUload",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p66500": {
+              "name": "TfIload",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p66600": {
+              "name": "TfItt",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p66700": {
+              "name": "TfUpwr",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p66800": {
+              "name": "TfIpwr",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p66900": {
+              "name": "TfUsg",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p67000": {
+              "name": "CFI_OFFSET",
+              "comment": "Смещение угла Фи",
+              "objType": "TInteger",
+              "msu": "e.grad"
+            },
+            "p68000": {
+              "name": "TfFi",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p69000": {
+              "name": "TfFreq",
+              "comment": "",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p70001": {
+              "name": "Modbus_option_DVA",
+              "comment": "адрес",
+              "objType": "TByte",
+              "msu": "*"
+            },
+            "p71001": {
+              "name": "Modbus_USB_DVA",
+              "comment": "адрес",
+              "objType": "TByte",
+              "msu": "*"
+            },
+            "p72001": {
+              "name": "Modbus_RS485_DVA",
+              "comment": "адрес",
+              "objType": "TByte",
+              "msu": "*"
+            }
+          }
+        }
+      },
+      "U2": {
+        "PositionName": "U2",
+        "Description": "iCM.NSK/Коммуникационный модуль",
+        "Pages": [],
+        "Slots": [
+          "U2:FLASH"
+        ],
+        "Tags": {
+          "ram": {},
+          "flash": {
+            "p0": {
+              "name": "COM4_ADR",
+              "comment": "адрес (UART0)        ",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p1": {
+              "name": "COM4_BPS",
+              "comment": "скорость связи(UART0)",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p2": {
+              "name": "COM2_ADR",
+              "comment": "адрес (UART1)        ",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p3": {
+              "name": "COM2_BPS",
+              "comment": "скорость связи(UART1)",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p4": {
+              "name": "COM1_ADR",
+              "comment": "адрес (UART2)        ",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p5": {
+              "name": "COM1_BPS",
+              "comment": "скорость связи(UART2)",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p6": {
+              "name": "COM3_ADR",
+              "comment": "адрес (UART3)        ",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p7": {
+              "name": "COM3_BPS",
+              "comment": "скорость связи(UART3)",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p8": {
+              "name": "WaitPrevLNKStateTime",
+              "comment": "Пауза после вкл. питания арбитра",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p9": {
+              "name": "WaitSyncOpposite",
+              "comment": "Время ожидания пропадания синхронизации дублирующего контроллера",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p10": {
+              "name": "OVHDelayTime",
+              "comment": "задержка перед оключением при аварии \"ПЕРЕГРЕВ\" от ТК (Термоконтроллера)",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p11": {
+              "name": "IosM",
+              "comment": "Допустимое отклоние тока возбуждения регуляторов в \"-\"",
+              "objType": "TWORD",
+              "msu": "%"
+            },
+            "p12": {
+              "name": "TIosM",
+              "comment": "Допустимое время отличия тока регуляторов",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p13": {
+              "name": "RelayNVROffTime",
+              "comment": "Время отпадания реле Неисправность Регуляторов",
+              "objType": "TWORD",
+              "msu": "mS"
+            },
+            "p14": {
+              "name": "iADC1C",
+              "comment": "ADC1 смещение нуля",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p15": {
+              "name": "iADC1K",
+              "comment": "ADC1 наклон",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p16": {
+              "name": "iADC2C",
+              "comment": "ADC2 смещение нуля",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p17": {
+              "name": "iADC2K",
+              "comment": "ADC2 наклон",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p18": {
+              "name": "iCOUT1K",
+              "comment": "1-й 4-20mA выход масштаб",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p19": {
+              "name": "iCOUT2K",
+              "comment": "2-й 4-20mA выход масштаб",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p20": {
+              "name": "iCOUT3K",
+              "comment": "3-й 4-20mA выход масштаб",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p21": {
+              "name": "iCOUT1OFS",
+              "comment": "1-й 4-20mA выход смещение до 4мА",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p22": {
+              "name": "iCOUT2OFS",
+              "comment": "2-й 4-20mA выход смещение до 4мА",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p23": {
+              "name": "iCOUT3OFS",
+              "comment": "3-й 4-20mA выход смещение до 4мА",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p24": {
+              "name": "iCIN_FLC",
+              "comment": "минимальный ток в линии 4-20мА",
+              "objType": "TWORD",
+              "msu": "mA"
+            },
+            "p25": {
+              "name": "iCIN_FCT",
+              "comment": "время определения обрыва линии 4-20мА",
+              "objType": "TWORD",
+              "msu": "sec"
+            },
+            "p26": {
+              "name": "iCIN_ZRO",
+              "comment": "смещение полезного сигнала линии 4-20мА",
+              "objType": "TWORD",
+              "msu": "mA"
+            },
+            "p27": {
+              "name": "UstatM",
+              "comment": "Допустимое отклоние Ust",
+              "objType": "TWORD",
+              "msu": "%"
+            },
+            "p28": {
+              "name": "TUstatM",
+              "comment": "Допустимое время Ust регуляторов",
+              "objType": "TWORD",
+              "msu": "*"
+            },
+            "p29": {
+              "name": "REG3K",
+              "comment": "регистр вывода на линию 3 4-20мА",
+              "objType": "TWORD",
+              "msu": "REG"
+            }
+          },
+          "cd": {}
+        }
+      }
+    }
+  }
+}

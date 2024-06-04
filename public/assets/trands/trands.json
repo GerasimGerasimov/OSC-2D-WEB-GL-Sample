@@ -1,0 +1,19 @@
+{
+    "deep":2048,
+    "interval":10,
+    "initialWidthScale": 1,
+    "trands": {
+        "trand_1":{
+            "height":"30%",
+            "tags": {
+                "U1/RAM/Ustat":{
+                    "color":"blue",
+                    "signed": true,
+                    "fraction":1,
+                    "offset": "50 %",
+                    "MaxValueMode":"MaxOfAllRange"
+                }
+            }
+        }
+    }
+}
