@@ -95,6 +95,16 @@ export class TTrands {
         this.updateTimer = setInterval(this.updateTrandsValue.bind(this), this.interval)
     }
 
+    public startAddFakeValuesTimer() {
+        this.updateTimer = setInterval(this.addFakeTrandsValue.bind(this), this.interval);
+    }
+
+    private addFakeTrandsValue(){
+        this.trandsGroups.forEach((group:TTrandsGroup)=>{
+            group.setFakeTagsValues();
+        })
+      }
+
     private updateTrandsValue(){
       if (this.run) {
         this.trandsGroups.forEach((group:TTrandsGroup)=>{

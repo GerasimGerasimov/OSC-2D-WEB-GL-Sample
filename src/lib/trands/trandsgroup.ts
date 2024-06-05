@@ -7,6 +7,8 @@ interface ITrandsGroupProp {
   tags: Array<string>
 }
 
+const rad: number = Math.PI / 180.0;
+
 export class TTrandsGroup {
   private deep: number; //глубина архива
   private height: string;
@@ -43,12 +45,21 @@ export class TTrandsGroup {
     return tags;
   }
 
+  public setFakeTagsValues(){
+    this.trands.forEach((tag:TTrand) => {
+      //const value = tag.getTagValue();
+      //tag.setValueToModel(value);
+      let w:number = (Math.sin(this.count*rad)+1)*100;
+      console.log(w);
+      tag.setParameterValue(w);
+      if (this.count++ > 360) this.count = 0;
+    })
+  }
+
   public setTagsValues() {
     this.trands.forEach((tag:TTrand) => {
       const value = tag.getTagValue();
       tag.setValueToModel(value);
-      //tag.setValueToModel(this.count);
-      //if (this.count++ > 128) this.count = 0;
     })
   }
 }

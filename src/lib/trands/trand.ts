@@ -78,6 +78,14 @@ export class TTrand {
     return value
   }
 
+  public setParameterValue(value: number){
+    if (this.parameter){
+      if ('value' in this.parameter) {
+        this.parameter.value = String(value);
+      }
+    }
+  }
+
   public setValueToModel(value: any) {
     this.model.setValue(value);
   }

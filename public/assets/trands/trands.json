@@ -8,9 +8,9 @@
             "tags": {
                 "U1/RAM/Ustat":{
                     "color":"blue",
-                    "signed": true,
+                    "signed": false,
                     "fraction":1,
-                    "offset": "50 %",
+                    "offset": "0 %",
                     "MaxValueMode":"MaxOfAllRange"
                 }
             }

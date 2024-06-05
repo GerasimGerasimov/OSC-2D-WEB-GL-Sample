@@ -15,6 +15,7 @@ const stores = {
     await stores.mainStore.devicesInfoStore.getDevicesInfo();
     await Trands.loadConfig();
     Trands.startUpdateTimer();
+    Trands.startAddFakeValuesTimer();
     startApp();
   } catch (e) {
     console.log('AppError', e);
