@@ -23,6 +23,7 @@ export interface IDrawCanvasProps {
 
 export default class Canvas extends Component <IDrawCanvasProps, {}>{
   private ctx: any;
+  private backbitmap: any = undefined;
   constructor(props: IDrawCanvasProps) {
     super(props);
   }
@@ -52,12 +53,17 @@ export default class Canvas extends Component <IDrawCanvasProps, {}>{
     canvas.stroke();
   }
 
+  /*РИСОВАНИЕ НАЧИНАЕТСЯ ТУТ*/
   private draw() {
+    const start = performance.now();
     this.props.viewBoxModel.draw();
     if (this.props.isMeasure)
       {this.drawSelectingPointer(this.props.Selected.Left)}
-    const bitmapOne = this.props.viewBoxModel.Canvas.transferToImageBitmap();
-    this.ctx.transferFromImageBitmap(bitmapOne);
+    this.backbitmap = this.props.viewBoxModel.Canvas.transferToImageBitmap();
+    this.ctx.transferFromImageBitmap(this.backbitmap);
+    const end = performance.now();
+    const time = end - start;
+    console.log(time);
   }
 
   render() {

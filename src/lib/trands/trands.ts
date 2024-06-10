@@ -101,7 +101,7 @@ export class TTrands {
 
     private addFakeTrandsValue(){
         this.trandsGroups.forEach((group:TTrandsGroup)=>{
-            group.setFakeTagsValues();
+            group.setTagsFakeValues();
         })
       }
 

@@ -45,12 +45,12 @@ export class TTrandsGroup {
     return tags;
   }
 
-  public setFakeTagsValues(){
+  public setTagsFakeValues(){
     this.trands.forEach((tag:TTrand) => {
       //const value = tag.getTagValue();
       //tag.setValueToModel(value);
       let w:number = (Math.sin(this.count*rad)+1)*100;
-      console.log(w);
+      //console.log(w);
       tag.setParameterValue(w);
       if (this.count++ > 360) this.count = 0;
     })
