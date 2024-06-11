@@ -42,7 +42,7 @@ export default class Canvas extends Component <IDrawCanvasProps, {}>{
   componentDidUpdate() {
     setTimeout(()=>{
       this.draw();
-    },0)
+    },0)//TODO тут надо задавать как часто обновляется график тредов
   }
   
   private drawSelectingPointer(left: number) {
