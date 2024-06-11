@@ -75,9 +75,9 @@ export default class TViewBoxModel {
     }
 
     public draw() {
-      this.ctx.fillStyle = 'white';
-      this.ctx.fillRect(0, 0, this.ctxsize.width, this.ctxsize.height);
-      this.drawLineChart();
+      //this.ctx.fillStyle = 'white';
+      //this.ctx.fillRect(0, 0, this.ctxsize.width, this.ctxsize.height);
+      //this.drawLineChart();
     }
 
     public getLegendStaticData():Array<any> {
@@ -137,7 +137,7 @@ export default class TViewBoxModel {
           (height !== this.ctxsize.height)) {
             this.ctxsize = {width, height}
             this.canvas = new OffscreenCanvas(this.ctxsize.width, this.ctxsize.height);
-            this.ctx = this.canvas.getContext("2d", { alpha: false });
+            this.ctx = this.canvas.getContext('webgl', {preserveDrawingBuffer: true});//getContext("2d", { alpha: false });
             this.ctx.imageSmoothingEnabled = false;
             this.ctx.lineWidth = 1;
             this.resizeViews();
