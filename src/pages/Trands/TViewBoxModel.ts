@@ -135,6 +135,9 @@ export default class TViewBoxModel {
     public resize(width: number, height: number) {
       if ((width !== this.ctxsize.width) || 
           (height !== this.ctxsize.height)) {
+            //Для GL достаточно подтвердить изменение размеров исходного холста
+            //gl.viewport(0, 0, canvas.width, canvas.height);
+            //тут похоже создаётся бэкбуфер, пока не знаю нужен ли он для GL
             this.ctxsize = {width, height}
             this.canvas = new OffscreenCanvas(this.ctxsize.width, this.ctxsize.height);
             this.ctx = this.canvas.getContext('webgl', {preserveDrawingBuffer: true});//getContext("2d", { alpha: false });
