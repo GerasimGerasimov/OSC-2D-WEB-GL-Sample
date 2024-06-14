@@ -105,12 +105,12 @@ export default class Canvas extends Component <IDrawCanvasProps, {}>{
         var positionBuffer: WebGLBuffer | null = gl.createBuffer();
         if (positionBuffer) {
           gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-          // три двумерных точки
+          // четыре, расположенных одна за другой двумерных точки, режим gl.LINE_STRIP
           var positions = [
-            0, 0,      //0я-точка начало
-            0.25, 0.25,//0я-точка конец
-            0.25, 0.25,//1я-точка начало
-            0.75, -0.5   //1я-точка конец
+            0, 0,      //0я-точка
+            0.25, 0.65,//1я-точка
+            0.25, -0.25,//2я-точка
+            0.75, -0.5  //3я-точка
           ];
           gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
           gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
@@ -127,7 +127,7 @@ export default class Canvas extends Component <IDrawCanvasProps, {}>{
           var offset = 0;        // начинать с начала буфера
           gl.vertexAttribPointer(positionAttributeLocation, size, type, normalize, stride, offset);
 
-          var primitiveType: number = gl.LINES;//gl.TRIANGLES;
+          var primitiveType: number = gl.LINE_STRIP;
           var offset: number = 0;
           var count: number = 4;
           gl.drawArrays(primitiveType, offset, count);
