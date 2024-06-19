@@ -39,7 +39,7 @@ const vertex_shader_2d: string = `
 const fragment_shader_2d: string =`
   // фрагментные шейдеры не имеют точности по умолчанию, поэтому нам необходимо её
   // указать. mediump подойдёт для большинства случаев. Он означает "средняя точность"
-  precision mediump float;
+  precision lowp float;
  
   void main() {
     // gl_FragColor - специальная переменная фрагментного шейдера.
@@ -89,48 +89,86 @@ function clearScreen(gl: WebGL2RenderingContext) {
 export default class Canvas extends Component <IDrawCanvasProps, {}>{
   private ctx: any;
   private backbitmap: any = undefined;
+  private gl:WebGL2RenderingContext | undefined = undefined;
+  private positions: Array<number> = [
+    0, 0,      //0я-точка
+    0.25, 0.65,//1я-точка
+    0.25, -0.25,//2я-точка
+    0.75, -0.5,  //3я-точка
+    0, 0,      //0я-точка
+    0.25, 0.65,//1я-точка
+    0.25, -0.25,//2я-точка
+    0.75, -0.5,  //3я-точка
+    0, 0,      //0я-точка
+    0.25, 0.65,//1я-точка
+    0.25, -0.25,//2я-точка
+    0.75, -0.5,  //3я-точка
+    0, 0,      //0я-точка
+    0.25, 0.65,//1я-точка
+    0.25, -0.25,//2я-точка
+    0.75, -0.5,  //3я-точка
+    0, 0,      //0я-точка
+    0.25, 0.65,//1я-точка
+    0.25, -0.25,//2я-точка
+    0.75, -0.5,  //3я-точка
+    0, 0,      //0я-точка
+    0.25, 0.65,//1я-точка
+    0.25, -0.25,//2я-точка
+    0.75, -0.5,  //3я-точка
+    0, 0,      //0я-точка
+    0.25, 0.65,//1я-точка
+    0.25, -0.25,//2я-точка
+    0.75, -0.5,  //3я-точка
+    0, 0,      //0я-точка
+    0.25, 0.65,//1я-точка
+    0.25, -0.25,//2я-точка
+    0.75, -0.5,  //3я-точка
+    0, 0,      //0я-точка
+    0.25, 0.65,//1я-точка
+    0.25, -0.25,//2я-точка
+    0.75, -0.5,  //3я-точка
+    0, 0,      //0я-точка
+    0.25, 0.65,//1я-точка
+    0.25, -0.25,//2я-точка
+    0.75, -0.5,  //3я-точка
+  ];
+
+  private positionAttributeLocation = 0;
+  private positionBuffer: WebGLBuffer | null = null;
+
   constructor(props: IDrawCanvasProps) {
     super(props);
   }
 
   saveContext(element: any) {
     this.ctx = element.getContext('webgl', {preserveDrawingBuffer: true});
-    const gl:WebGL2RenderingContext = this.ctx;
+    var gl: WebGL2RenderingContext =  this.gl = this.ctx;
     var vertexShader = createShader(gl, gl.VERTEX_SHADER, vertex_shader_2d);
     var fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragment_shader_2d);
     if (vertexShader && fragmentShader) {
       var program: WebGLProgram | null = createProgram(gl, vertexShader, fragmentShader);
       if (program) {
-        var positionAttributeLocation = gl.getAttribLocation(program, "a_position");
-        var positionBuffer: WebGLBuffer | null = gl.createBuffer();
-        if (positionBuffer) {
-          gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+        this.positionAttributeLocation = gl.getAttribLocation(program, "a_position");
+        this.positionBuffer = gl.createBuffer();
+        if (this.positionBuffer) {
+          gl.bindBuffer(gl.ARRAY_BUFFER, this.positionBuffer);
           // четыре, расположенных одна за другой двумерных точки, режим gl.LINE_STRIP
-          var positions = [
-            0, 0,      //0я-точка
-            0.25, 0.65,//1я-точка
-            0.25, -0.25,//2я-точка
-            0.75, -0.5  //3я-точка
-          ];
-          gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
+          gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(this.positions), gl.DYNAMIC_DRAW);
           gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
           clearScreen(gl);
           gl.useProgram(program);// говорим использовать нашу программу (пару шейдеров)
-          gl.enableVertexAttribArray(positionAttributeLocation);
+          gl.enableVertexAttribArray(this.positionAttributeLocation);
           // Привязываем буфер положений
-          gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+          gl.bindBuffer(gl.ARRAY_BUFFER, this.positionBuffer);
           // Указываем атрибуту, как получать данные от positionBuffer (ARRAY_BUFFER)
           var size = 2;          // 2 компоненты на итерацию
           var type = gl.FLOAT;   // наши данные - 32-битные числа с плавающей точкой
+                                // а могут быть:
+                                //BYTE, UNSIGNED_BYTE, SHORT, UNSIGNED_SHORT, INT, UNSIGNED_INT
           var normalize = false; // не нормализовать данные
           var stride = 0;        // 0 = перемещаться на size * sizeof(type) каждую итерацию для получения следующего положения
           var offset = 0;        // начинать с начала буфера
-          gl.vertexAttribPointer(positionAttributeLocation, size, type, normalize, stride, offset);
-
-          var primitiveType: number = gl.LINE_STRIP;
-          var offset: number = 0;
-          var count: number = 4;
-          gl.drawArrays(primitiveType, offset, count);
+          gl.vertexAttribPointer(this.positionAttributeLocation, size, type, normalize, stride, offset);
         }
       }
     }
@@ -162,10 +200,21 @@ export default class Canvas extends Component <IDrawCanvasProps, {}>{
   /*РИСОВАНИЕ НАЧИНАЕТСЯ ТУТ*/
   private draw() {
     const start = performance.now();
-    this.props.viewBoxModel.draw();
-    if (this.props.isMeasure)
-      {this.drawSelectingPointer(this.props.Selected.Left)}
-    this.backbitmap = this.props.viewBoxModel.Canvas.transferToImageBitmap();
+    //gl.lineWidth(0.1); это не работает!
+    var gl: WebGL2RenderingContext | undefined=  this.gl;
+    if (gl) {
+      clearScreen(gl);
+      this.positions.forEach((e,i,a)=>{ a[i] = Math.random()});
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(this.positions), gl.DYNAMIC_DRAW);
+      var primitiveType: number = gl.LINE_STRIP;
+      var offset: number = 0;
+      var count: number = this.positions.length >> 1;
+      gl.drawArrays(primitiveType, offset, count);
+    }
+    //this.props.viewBoxModel.draw();
+    //if (this.props.isMeasure)
+    //  {this.drawSelectingPointer(this.props.Selected.Left)}
+    //this.backbitmap = this.props.viewBoxModel.Canvas.transferToImageBitmap();
     /*TODO отрисовка */
     //this.ctx.transferFromImageBitmap(this.backbitmap);
     const end = performance.now();
